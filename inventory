@@ -1,9 +1,14 @@
-host:
-  pi-master:
-  pi-node-[1:4]:
+dev:
+  hosts:
+    pi-master.lab.home.karlgray.xyz:
+      ansible_become_user: pi
+    pi-node-[1:4].lab.home.karlgray.xyz:
+      ansible_become_user: pi
 
 worker:
-  pi-node-[1:4]:
+  hosts:
+    pi-node-[1:4].lab.home.karlgray.xyz:
 
 master:
-  pi-master:
+  hosts:
+    pi-master.lab.home.karlgray.xyz:
